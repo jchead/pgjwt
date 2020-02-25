@@ -1,0 +1,7 @@
+FROM postgres:10
+RUN apt-get update && apt-get install -y make git postgresql-server-dev-10 postgresql-10-pgtap
+RUN mkdir "/pgjwt"
+WORKDIR "/pgjwt"
+COPY . .
+RUN make && make install
+
