@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/pgjwt
+    machine: true
+    # docker:
+    #   - image: cimg/node:12.16
+    steps:
+        - checkout      
+        # - setup_remote_docker
+            # docker_layer_caching: true                    
+        - test:
+            name: Run Tests
+            command: ./test.sh
+            
+
