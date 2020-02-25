@@ -11,7 +11,7 @@ echo building test image
 docker build . --force-rm -t pgjwt/test
 
 echo running test container
-docker run -d --name "$DB_HOST" pgjwt/test 
+docker run -d -e POSTGRES_PASSWORD=password --name "$DB_HOST" pgjwt/test
 
 echo waiting for database to accept connections
 until

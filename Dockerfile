@@ -1,5 +1,5 @@
-FROM postgres:11
-RUN apt-get update && apt-get install -y make git postgresql-server-dev-11 postgresql-11-pgtap
+FROM postgres:12
+RUN apt-get update && apt-get install -y make git postgresql-server-dev-12 postgresql-12-pgtap
 RUN mkdir "/pgjwt"
 WORKDIR "/pgjwt"
 COPY . .
