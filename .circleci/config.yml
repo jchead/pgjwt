@@ -9,8 +9,8 @@ jobs:
         - checkout      
         # - setup_remote_docker
             # docker_layer_caching: true                    
-        - test:
-            name: Run Tests
+        - run:
+            name: Build + Run Tests
             command: ./test.sh
             
 
